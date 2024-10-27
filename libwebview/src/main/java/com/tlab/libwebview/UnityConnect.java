@@ -1809,6 +1809,77 @@ public class UnityConnect extends Fragment {
         });
     }
 
+    /**
+     * Dispatch of the Up Arrow key event.
+     */
+    public void upArrowKey() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(() -> {
+            if (m_frameLayout == null) {
+                return;
+            }
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_UP));
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DPAD_UP));
+        });
+    }
+
+    /**
+     * Dispatch of the Down Arrow key event.
+     */
+    public void downArrowKey() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(() -> {
+            if (m_frameLayout == null) {
+                return;
+            }
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_DOWN));
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DPAD_DOWN));
+        });
+    }
+
+    /**
+     * Dispatch of the Left Arrow key event.
+     */
+    public void leftArrowKey() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(() -> {
+            if (m_frameLayout == null) {
+                return;
+            }
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_LEFT));
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DPAD_LEFT));
+        });
+    }
+
+    /**
+     * Dispatch of the Right Arrow key event.
+     */
+    public void rightArrowKey() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(() -> {
+            if (m_frameLayout == null) {
+                return;
+            }
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_RIGHT));
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DPAD_RIGHT));
+        });
+    }
+
+    /**
+     * Dispatch of the Tab key event.
+     */
+    public void tabKey() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(() -> {
+            if (m_frameLayout == null) {
+                return;
+            }
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_TAB));
+            m_frameLayout.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_TAB));
+        });
+    }
+
+
     //
     // page back/forward
     //
